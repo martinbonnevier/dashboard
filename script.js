@@ -46,7 +46,8 @@ function updateSongInfo() {
         .then(data => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data, "text/xml");
-            console.log("XML: ", xmlDoc)
+            // console.log("XML: ", xmlDoc)
+            
             const song = xmlDoc.getElementsByTagName("song")[0];
             let songInfo;
             if (song) {
@@ -67,7 +68,7 @@ function updateSongInfo() {
 
                         // Iterate through each program
                         programData.querySelectorAll('program').forEach(program => {
-                            console.log("Programmis: ", program)
+                            // console.log("Programmis: ", program)
                             const broadcastInfo = program.querySelector('broadcastinfo').textContent;
                             const daysOfWeek = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
                             if (broadcastInfo.includes(daysOfWeek[currentDay])) {
@@ -81,7 +82,7 @@ function updateSongInfo() {
                                     // Check if the current time is within the program's broadcast time
                                     if (currentTime >= startTime && currentTime <= endTime) {
                                         currentProgram = program.querySelector('name').textContent;
-                                        console.log("Curry: ", currentProgram);
+                                        // console.log("Curry: ", currentProgram);
                                     }
                                 }
                             }
@@ -124,8 +125,8 @@ setInterval(updateWeather, 60 * 60 * 1000);
 updateSongInfo();
 
 function getProgram(){
-    fetch('http://api.sr.se/api/v2/channels/203').then(response => {
-        console.log("Prog-respons: ", response);
+    fetch('https://api.sr.se/api/v2/channels/203').then(response => {
+        // console.log("Prog-respons: ", response);
     })
 }
 
