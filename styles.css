@@ -1,0 +1,61 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./bg.png');  /* Replace 'background.jpg' with the path to your image */
+    background-size: cover;  /* Cover ensures the background image covers the entire element */
+    background-position: center;  /* Center positions the background image in the center of the element */
+    background-repeat: no-repeat;  /* No-repeat ensures the image doesn't repeat */
+    background-attachment: fixed;  /* Fixed makes the background image fixed in place as the user scrolls */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(3px);
+    width: 100%; /* This will ensure that the card takes up 100% of the width of its parent container */
+}
+
+
+#controls button {
+    margin-right: 10px;
+}
+
+.card-img-top {
+    max-height: 50px;  /* or whatever height you prefer */
+    object-fit: contain;  /* This will ensure the image covers the area without stretching */
+    width: 100%;  /* This will ensure the image takes the full width of the card */
+    margin-top: 10px;
+}
+
+
+
+
+@media (max-width: 200px) {  /* This ensures the rule only applies to small screens */
+    .card {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        backdrop-filter: blur(3px);
+        width: 50%; /* This will ensure that the card takes up 100% of the width of its parent container */
+    }
+}
+
+#week-number {
+    font-size: 5rem;
+    color: #E30B5C;
+}
+
+#current-time {
+    font-size: 3rem;
+    color: #E30B5C;
+}
+
+#current-song {
+    margin-top: 2rem;
+    font-size: x-small;
+}
+
+.flex-card-container {
+    flex: 1 0 auto;
+}
+#weather-icon {
+    width: 90%;
+}

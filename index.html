@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid mt-5">
+        <div class="row g-0">
+            <div class="col-sm-4 mb-3 d-flex">
+                <div class="card h-100 mb-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Current Time</h5>
+                        <div id="time" class="card-text">
+                            <div id="current-time"></div>
+                        </div>
+                        <div id="timeRemaining"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-3 d-flex">
+                <div class="card h-100 mb-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Current Week: <div id="week-number"></div>
+                        </h5>
+                        <div id="week" class="card-text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-3 d-flex">
+                <div class="card h-100 mb-3 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Weather</h5>
+                        <p id="weather-info">Fetching weather...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radio Control Card -->
+            <div class="col-sm-4 mb-3 d-flex">
+                <div class="card h-100 mb-3 text-center">
+                    <img class="card-img-top"
+                        src="https://static-cdn.sr.se/images/91/317c1c40-0352-49e1-913c-9c718b788419.jpg?preset=api-default-square"
+                        alt="P4 Jönköping">
+                    <div class="card-body">
+                        <h5 class="card-title">P4 Jönköping</h5>
+
+                        <audio id="radioStream" class="w-100">
+                            <source src="https://sverigesradio.se/topsy/direkt/srapi/203.mp3" type="audio/mp3">
+                        </audio>
+                        <div id="controls" class="mt-3">
+                            <button id="playButton" class="btn btn-primary">Play</button>
+                            <button id="stopButton" class="btn btn-secondary">Stop</button>
+                        </div>
+                        <div id="current-song"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... scripts ... -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
