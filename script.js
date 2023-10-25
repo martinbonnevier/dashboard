@@ -55,7 +55,7 @@ function updateSongInfo() {
                 songInfo = `${artist} - ${title}`;
                 document.getElementById('current-song').textContent = songInfo;
             } else {
-                fetch('http://api.sr.se/api/v2/programs/index?channelid=203')
+                fetch('https://api.sr.se/api/v2/programs/index?channelid=203')
                     .then(response => response.text())
                     .then(data => {
                         const programData = (new window.DOMParser()).parseFromString(data, "text/xml");
