@@ -41,7 +41,7 @@ function updateWeek() {
 }
 
 function updateSongInfo() {
-    fetch('http://api.sr.se/api/v2/playlists/rightnow?channelid=203')
+    fetch('https://api.sr.se/api/v2/playlists/rightnow?channelid=203')
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser();
